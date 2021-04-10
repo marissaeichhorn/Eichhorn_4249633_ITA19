@@ -53,9 +53,9 @@ classdef LinearRegressionModel < matlab.mixin.SetGet
             
             % compute the hypothesis values for each sample
             % therefore compute the matrix multiplication with X
-            % this calculation can be done by one line of code           
-            hValue = obj.theta(1)+obj.theta(2)*X(:,2);
+            % this calculation can be done by one line of code    
             
+            hValue = X*obj.theta; 
             % ========= YOUR CODE END ========= 
             
         end
@@ -68,7 +68,7 @@ classdef LinearRegressionModel < matlab.mixin.SetGet
             % ========= YOUR CODE HERE =========
             
             %all vector couples
-            costs = zeros(100,100);
+            costs = zeros(100,100); % hard coded limits
             
             for t1 = 1:100
                 for t2 = 1:100
