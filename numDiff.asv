@@ -1,0 +1,16 @@
+%f'(x) über Rechnung
+
+%über Vorwärtsdifferenzen
+function y = numDiffV(x)
+    y = (myPoly(x+10e-8)-myPoly(x))/10e-8;
+end
+
+%über Rückwärtsdifferenzen
+function y = numDiffR(x)
+    y = (myPoly(x+10e-8)-myPoly(x))/10e-8;
+end
+
+%über Zentraldifferenzen
+function y = numDiffZ(x)
+    y = (myPoly(x+10e-8)-myPoly(x))/10e-8;
+end
