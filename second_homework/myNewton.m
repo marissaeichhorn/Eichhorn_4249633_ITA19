@@ -51,10 +51,10 @@ if ~exist('dfunc', 'var')
     answer = questdlg('Which differentiation method do you want to use?', ...
         'calculation of derivative', ...
         'forward differences', 'backward differences', 'central differences', 'central differences');
-    switch answer
+    switch answer 
         case 'forward differences'
             disp([answer ' - You have decided on forward differences.'])
-            dfunc = @numDiffF;
+            dfunc = @numDiffF; % good
         case 'backward differences'
             disp([answer ' - You have decided on backward differences.'])
             dfunc = @numDiffB;
